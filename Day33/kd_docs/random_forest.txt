@@ -1,0 +1,31 @@
+Random Forest is an ensemble machine learning algorithm that combines
+multiple decision trees to produce a prediction. It can be used for
+both classification and regression. The main idea is that combining
+many diverse trees can produce more reliable predictions than relying
+on a single tree.
+
+During training, each tree is commonly built using a bootstrap sample
+of the original training dataset. At each split, the algorithm
+considers a random subset of features. This randomness encourages
+the trees to learn different patterns and reduces their correlation.
+
+For classification, a Random Forest commonly combines the class votes
+from its trees. For regression, it commonly averages the numerical
+predictions produced by the trees. Aggregating predictions can reduce
+variance and improve generalization.
+
+A decision tree is easy to interpret but may overfit its training
+data. A Random Forest usually reduces this risk by averaging the
+outputs of many trees. However, the resulting model is generally less
+interpretable than a single decision tree.
+
+Important Random Forest hyperparameters include the number of trees,
+the maximum tree depth, the minimum number of samples required to
+split a node, and the number of features considered at each split.
+These settings affect training time, model complexity, and predictive
+performance.
+
+Random Forest performance can be evaluated using accuracy, precision,
+recall, and F1 score for classification. Regression tasks may use
+mean absolute error or mean squared error. The metric should match
+the objective of the task.

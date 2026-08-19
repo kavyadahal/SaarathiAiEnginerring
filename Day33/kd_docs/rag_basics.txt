@@ -1,0 +1,40 @@
+Retrieval-Augmented Generation, commonly called RAG, combines
+information retrieval with text generation. Instead of answering
+every question using only knowledge stored in its model parameters,
+a RAG system retrieves relevant information from an external
+knowledge base and provides that information to a language model.
+
+A typical RAG pipeline starts by loading source documents. The
+documents are divided into smaller text chunks because searching
+entire books or long reports at once is often inefficient. Chunk
+size and overlap influence which information remains together in
+each searchable passage.
+
+An embedding model converts text into numerical vectors. Similar
+texts often have vectors that are close in the embedding space.
+The vectors can be stored in a vector database and searched when
+a user asks a question. The system retrieves passages that are
+likely to contain information relevant to the query.
+
+The language model receives the question and retrieved context.
+It then generates an answer based on the supplied information.
+Retrieval quality matters because missing or irrelevant context
+can lead to incomplete or incorrect answers.
+
+RAG evaluation examines several different parts of the pipeline.
+Faithfulness measures whether claims in an answer are supported
+by the retrieved context. Answer relevancy measures whether the
+answer addresses the user's question. Context precision examines
+whether retrieved passages are relevant, while context recall
+examines whether the context contains the information needed
+to answer the question.
+
+A RAG system can retrieve relevant documents but still generate
+an incorrect answer. It can also produce a plausible answer when
+the retrieved context does not support that answer. Therefore,
+evaluating retrieval and answer generation separately helps
+identify the source of errors.
+
+A reliable RAG workflow includes document preparation, chunking,
+embedding generation, indexing, retrieval, answer generation,
+and evaluation. Each stage can be improved independently.
