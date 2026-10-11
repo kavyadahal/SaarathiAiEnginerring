@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Virtual environments
+rnn-gpu/
+nepal-docqa/
+
+# Generated vector database
+data/chroma_db/
+
+# Python and test caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
